@@ -29,6 +29,11 @@ namespace Sistema_Aduanero.Controllers
             return View();
         }
 
+        public IActionResult Noticias()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
