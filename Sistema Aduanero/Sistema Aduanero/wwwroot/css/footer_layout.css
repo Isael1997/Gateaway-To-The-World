@@ -1,0 +1,47 @@
+.contenedor_footer{
+    /* background: #7949b7; */
+    padding: 5px;
+    align-content:center;
+}
+
+.escudo_nacional_y_logo_en_footer{
+    /* background: gray; */
+}
+
+.escudo_nacional_footer{
+    width: 95px;
+    height: 101px;
+}
+
+.logo_empresa_footer{
+    width: 210px;
+    left: 0px;
+    position: relative;
+}
+
+.enlaces_de_otras_instituciones{
+    padding: 50px;
+    background: #25265e;
+}
+
+.imagen_enlaces{
+    max-width: 200px;
+    height: 95px;
+}
+
+/* TPC significa: Término de uso | Políticas de Privacidad | Preguntas Frecuentes */
+.contenedor_padre_para_TPP > .TPP{
+    left: 45px;
+    position: relative;
+}
+
+.TPP > a{
+    padding: 2px;
+    text-decoration: none;
+    color: #000;
+}
+
+.A2_footer{
+    left: 55px;
+    position: relative;
+}

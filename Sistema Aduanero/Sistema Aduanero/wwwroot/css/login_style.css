@@ -1,0 +1,26 @@
+.contedor_titulos_login_y_registro{
+
+}
+
+.formulario_login{
+    margin-top: 8px;
+}
+
+.formulario_login > div > button{
+    padding: 15px;
+}
+
+.mostrar_formulario_registro{
+    margin-top: 5px;
+}
+
+.btn_mostrar_formulario_registro{
+    padding: 15px;
+}
+
+.btn_guardar_nuevo_registro{
+    margin-top: 8px;
+}
+.btn_guardar_nuevo_registro > button{
+    padding: 20px;
+}

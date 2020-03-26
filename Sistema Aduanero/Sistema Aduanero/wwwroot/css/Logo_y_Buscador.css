@@ -1,0 +1,69 @@
+.logo_y_seBusca {
+    margin-top: 15px;
+}
+
+/* En esta sección de código se trabaja todo lo relacionado con el logo de la empresa. */
+.contenedor_logo_empresa {
+    position: relative;
+}
+
+.nombreEmpresa {
+    top: 25px;
+    bottom: 0px;
+    left: 150px;
+    right: 0px;
+    color: black;
+    position: absolute;
+}
+/* En esta sección de código se trabaja todo lo relacionado con el logo de la empresa. */
+
+
+/* Aquí se trabaja el escudo nacional de la nación y el buscador */
+.contenedor_del_escudo_y_buscador {
+    position: relative;
+}
+
+.escudoNacional {
+    width: 50px;
+}
+
+.nombreDeLaNacion {
+    top: 10px;
+    bottom: 0px;
+    left: 70px;
+    right: 0px;
+    font-size: 25px;
+    font-style: italic;
+    position: absolute;
+}
+
+.contenedor_de_Buscador {
+    margin-top: 3px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+}
+
+.formulario_Para_Buscar {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.miniMenu {
+    top: 90px;
+    bottom: 0px;
+    left: 70px;
+    right: 0px;
+    position: absolute;
+}
+
+    .miniMenu > a {
+        text-decoration: none;
+        color: #000;
+    }
+
+
+.perfil{
+    text-align:left;
+}
+/* Aquí se trabaja el escudo nacional de la nación y el buscador */
