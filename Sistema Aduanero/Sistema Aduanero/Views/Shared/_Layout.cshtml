@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="~/css/footer_layout.css">
         <link rel="stylesheet" href="~/css/Logo_y_Buscador.css">
         <link rel="stylesheet" href="~/css/noticias_Index.css">
+        <link rel="stylesheet" href="~/css/servicios_style.css">
         <link rel="stylesheet" href="~/css/login_style.css">
     </environment>
     <environment exclude="Development">
@@ -25,13 +26,9 @@
     <header class="container logo_y_seBusca">
         <div class="row">
             <!-- Este div contiene el logo de la empresa y el nombre de la misma. -->
-            <div class="col-md-3 contenedor_logo_empresa">
-                <img src="../IMG/Logo.png" class="rounded logo" alt="dasd hola" width="250">
-                
-            </div>
-
-            <div class="col-md-2 contenedor_logo_empresa">
-                <h3 class="nombreEmpresa"> GATEWAY TO THE WORLD </h3>
+            <div class="col-md-5 contenedor_logo_empresa">
+                <img src="../IMG/Logo.jpg" class="rounded logo" alt="dasd hola">
+                <h3 class="nombreEmpresa">GATEWAY TO THE WORLD</h3>
             </div>
 
             <!-- En este div esta el escudo nacional de la nación y el buscador. -->
@@ -39,21 +36,21 @@
 
                 <img src="../IMG/Escudo_Nacional.PNG" class="rounded escudoNacional" alt="imagen del escudo nacional">
                 <p class="nombreDeLaNacion">República Dominicana</p>
-
+                
                 <form action="" method="get" class="formulario_Para_Buscar">
                     <div class="input-group">
-                        <input type="text" name="noticias" class="form-control" placeholder="Buscar...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="submit">
-                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                            </button>
-                        </span>
+                            <input type="text" name="noticias" class="form-control" placeholder="Buscar...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </span>
                     </div><!-- /input-group -->
                     <!--</div> /.col-lg-6 -->
                 </form>
-
+                
                 <span class="miniMenu">
-                    <a href="../Home/Index">INICIO</a> | <a href="#">MAPA DEL SITIO</a> | <a href="../Home/Contact">CONTACTO</a>
+                    <a href="#">INICIO</a> | <a href="#">MAPA DEL SITIO</a> | <a href="#">CONTACTO</a>
                 </span>
             </div>
         </div>
@@ -68,31 +65,26 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">GATEWAY TO THE WORLD</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">GATEWAY TO THE WORD</a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav menu_Desktop">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">Sobre Nosotros</a></li>
-                    <li><a asp-area="" asp-controller="Servicios" asp-action="Index">Servicios</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Sobre_Nosotros">Sobre Nosotros</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Servicios">Servicios</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Noticias">Noticias</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Login">Login</a></li>
-                    <li class="perfil"><a asp-area="" asp-controller="Default" asp-action="Index">Login</a></li>
-
-
                 </ul>
-                <a class="btn btn-default menu_Desktop" href="#"><label>Perfil</label></a>
             </div>
         </div>
     </nav>
-
 
     <partial name="_CookieConsentPartial" />
 
     <div class="container body-content carousel_imagenes">
         @RenderBody()
     </div>
-
+    
     <div class="container-fluid">
         <hr />
         <!-- Enlaces para redireccionar a los portales de otras instituciones. -->
@@ -126,14 +118,13 @@
         </div>
     </div>
 
-    <footer class="contenedor_footer">
+    <footer class="container-fluid contenedor_footer">
         <div class="row">
-            <!--aquí el escudo nacional y logo de la empresa-->
+             <!--aquí el escudo nacional y logo de la empresa-->
             <div class="col-sm-12 col-md-offset-6 escudo_nacional_y_logo_en_footer">
                 <img src="../IMG/Escudo_Nacional.PNG" alt="imagen" class="escudo_nacional_footer">
-                <img src="../IMG/Logo.png" alt="imagen" class="logo_empresa_footer" width="250">
+                <img src="../IMG/Logo.jpg" alt="imagen" class="logo_empresa_footer">
             </div>
-
         </div>
 
         <div class="row">
