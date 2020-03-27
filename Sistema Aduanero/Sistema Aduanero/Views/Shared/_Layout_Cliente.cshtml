@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sistema_Aduanero</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/footer_layout.css" />
+        <link rel="stylesheet" href="~/css/Logo_y_Buscador.css" />
+        <link rel="stylesheet" href="~/css/perfil_cliente_style.css" />
+        <link rel="stylesheet" href="~/css/formulario_de_importacion_y_exportacion.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <!--Menú-->
+    <header class="container logo_y_seBusca">
+        <div class="row">
+            <!-- Este div contiene el logo de la empresa y el nombre de la misma. -->
+            <div class="col-md-5 contenedor_logo_empresa">
+                <img src="../IMG/Logo.jpg" class="rounded logo" alt="dasd hola">
+                <h3 class="nombreEmpresa">GATEWAY TO THE WORLD</h3>
+            </div>
+
+            <!-- En este div esta el escudo nacional de la nación y el buscador. -->
+            <div class="col-md-4 col-md-offset-3 contenedor_del_escudo_y_buscador">
+
+                <img src="../IMG/Escudo_Nacional.PNG" class="rounded escudoNacional" alt="imagen del escudo nacional">
+                <p class="nombreDeLaNacion">República Dominicana</p>
+                
+                <form action="" method="get" class="formulario_Para_Buscar">
+                    <div class="input-group">
+                            <input type="text" name="noticias" class="form-control" placeholder="Buscar...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </span>
+                    </div><!-- /input-group -->
+                    <!--</div> /.col-lg-6 -->
+                </form>
+                
+                <span class="miniMenu">
+                    <a href="#">INICIO</a> | <a href="#">MAPA DEL SITIO</a> | <a href="#">CONTACTO</a>
+                </span>
+            </div>
+        </div>
+    </header>
+    <!-- La clase "menú" la utilizo para darle un margin-botton de 0px-->
+    <nav class="navbar navbar-inverse menu">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Cliente" asp-action="Perfil" class="navbar-brand">GATEWAY TO THE WORD</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav menu_Desktop">
+                    <li><a asp-area="" asp-controller="Cliente" asp-action="Perfil">Perfil</a></li>
+                    <li><a asp-area="" asp-controller="Cliente" asp-action="Listado_De_Servicios_Contratados">Consultar</a></li>
+                    <li><a asp-area="" asp-controller="Cliente" asp-action="Solicitar_Servicio_De_Importacion_O_Exportacion">Nueva Solicitud</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <partial name="_CookieConsentPartial" />
+
+    <div class="container body-content carousel_imagenes">
+        @RenderBody()
+    </div>
+    
+    <div class="container-fluid">
+        <hr />
+        <!-- Enlaces para redireccionar a los portales de otras instituciones. -->
+        <div class="row">
+            <div class="col-md-4 col-md-offset-5">
+                <h3 class="text-">Enlaces de interes</h3>
+            </div>
+        </div>
+        <div class="row enlaces_de_otras_instituciones">
+            <!-- Los enlaces que redireccionan a las otras instituciones. -->
+            <div class="col-md-2 col-md-offset-1">
+                <a href="https://republicadigital.gob.do/" target="_blank">
+                    <img class="imagen_enlaces" src="../IMG/MASICON.PNG">
+                </a>
+            </div>
+            <div class="col-md-2 col-md-offset-1">
+                <a href="https://presidencia.gob.do/" target="_blank">
+                    <img class="imagen_enlaces" src="../IMG/MASICON2.PNG">
+                </a>
+            </div>
+            <div class="col-md-2 col-md-offset-1">
+                <a href="http://311.gob.do/" target="_blank">
+                    <img class="imagen_enlaces" src="../IMG/MASICON3.PNG">
+                </a>
+            </div>
+            <div class="col-md-2 col-md-offset-1">
+                <a href="https://911.gob.do/" target="_blank">
+                    <img class="imagen_enlaces" src="../IMG/MASICON4.PNG">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid contenedor_footer">
+        <div class="row">
+             <!--aquí el escudo nacional y logo de la empresa-->
+            <div class="col-sm-12 col-md-offset-6 escudo_nacional_y_logo_en_footer">
+                <img src="../IMG/Escudo_Nacional.PNG" alt="imagen" class="escudo_nacional_footer">
+                <img src="../IMG/Logo.jpg" alt="imagen" class="logo_empresa_footer">
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Terminos de uso, Politicas de Privacidad y Contacto -->
+            <div class="col-sm-12 col-md-offset-5 contenedor_padre_para_TPP">
+                <span class="TPP">
+                    <a href="#">Término de uso</a> | <a href="#">Políticas de Privacidad</a> | <a href="#">Preguntas Frecuentes</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <!--aquí las certificaciones NORTIC-->
+            <div class="col-sm-12 col-md-offset-6 col-lg-6">
+                <img src="../IMG/A2.PNG" class="A2_footer">
+            </div>
+            <div class="col-sm-12 col-md-offset-6">
+                <p>&copy; 2020 - Sistema_Aduanero</p>
+            </div>
+        </div>
+    </footer>
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
