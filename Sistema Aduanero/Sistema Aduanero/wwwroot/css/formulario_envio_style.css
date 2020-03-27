@@ -1,0 +1,13 @@
+/**/
+.formulario_envio, .row > .col-md-12{
+    margin-top: 8px;
+}
+/**/
+
+/*Botón guardar nuevo envio*/
+.btn_guardar_envio{
+    margin-top:8px;
+    margin-left: 0px;
+    padding: 20px;
+}
+/*Botón guardar nuevo envio*/

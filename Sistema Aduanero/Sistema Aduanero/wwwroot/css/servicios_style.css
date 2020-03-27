@@ -1,0 +1,31 @@
+/* Fila importación */
+.fila_servicios_de_importacion{
+    font-size: 16px;
+    margin-top: 5px;
+}
+.btn_solicitud_servicio_importacion{
+    margin-top: 55px;
+    border-left: 1px solid #000;
+}
+.btn_servicio_importacion{
+    padding: 85px;
+}
+/* Fila importación */
+
+/* Fila de exportación */
+.fila_servicios_de_exportacion{
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.tabla_detalle_del_servicio > tr > td, button{
+    margin-left: 25px;
+}
+.btn_solicitud_servicio_exportacion{
+    margin-top: 155px;
+    border-left: 1px solid #000;
+}
+.btn_servicio_exportacion{
+    padding: 85px;
+}
+/* Fila de exportación */

@@ -1,0 +1,14 @@
+.formulario_envio, div{
+    margin-top: 8px;
+}
+.btn_guardar_solicitud{
+    padding: 20px;
+}
+.columna_para_radio_buttons{
+    position: relative;
+}
+.radio_button_exportar{
+    top: 0px;
+    left: 125px;
+    position: absolute;
+}
