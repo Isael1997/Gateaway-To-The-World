@@ -1,0 +1,37 @@
+.ir_arriba{
+    padding: 15px;
+    border-radius: 50%;
+    height: 100px;
+    width:  100px;
+    background: #5bc0de;
+    font-size: 25px;
+    text-align: center;
+    color: #000;
+    position: fixed;
+    display: none;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 100;
+    font-weight: 100;
+}
+.ir_arriba:hover{
+    background: #25265eaf;
+}
+.ir_arriba:active{
+    transform: scale(0.92);
+}
+.ir_arriba > span{
+    position: relative;
+    top: 20px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+@media only screen and (min-width:320px) and (max-width:768px){
+    .ir_arriba{
+        padding: 12px;
+        border-radius: 4px;
+    }
+}
