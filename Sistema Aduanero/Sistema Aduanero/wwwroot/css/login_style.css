@@ -5,7 +5,8 @@
     margin-top: 8px;
 }
 
-.formulario_login > div > button{
+.btn_iniciar_sesion{
+    margin-left: 0px;
     padding: 15px;
 }
 
@@ -14,6 +15,7 @@
 }
 
 .btn_mostrar_formulario_registro{
+    margin-left: 0px;
     padding: 15px;
 }
 
@@ -21,5 +23,6 @@
     margin-top: 8px;
 }
 .btn_guardar_nuevo_registro > button{
+    margin-left: 0px;
     padding: 20px;
 }
