@@ -1,0 +1,95 @@
+@{
+    Layout = "_Layout";
+}
+
+<div class="row contedor_titulos_login_y_registro">
+    <div class="col-md-6">
+        <h2 class="">Login</h2>
+    </div>
+    <div class="col-md-6 mostrar_formulario_registro">
+        <!-- Este boton tendra una función simple con JS para mostrar ese formulario. -->
+        <button type="button" class="btn btn-info btn_mostrar_formulario_registro">Nuevo registro</button>
+    </div>
+</div>
+<div class="row">
+    <form action="" method="" class="col-md-6">
+        <div class="row">
+            <div class="col-md-12">
+                <label for="correo">Correo:</label>
+                <input type="email" class="form-control" name="correo" placeholder="aqui_mi_correo@email.com">
+            </div>
+            <div class="col-md-12">
+                <label for="pass">Contraseña:</label>
+                <input type="password" class="form-control" name="pass">
+            </div>
+        </div>
+        <div class="row formulario_login">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-success btn-block btn_iniciar_sesion">Enviar</button>
+            </div>
+            <div class="col-md-4 col-md-offset-4">
+                <a href="#" class="text-danger">Olvide mi contraseña</a>
+            </div>
+        </div>
+    </form>
+
+    <form action="" method="" class="col-md-6">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="apellidos">Apellido(s):</label>
+                <input type="text" name="apellidos" id="" class="form-control" placeholder="Duarte y Diez">
+            </div>
+            <div class="col-md-6">
+                <label for="Nombres">Nombre(s)</label>
+                <input type="text" name="Nombres" id="" class="form-control" placeholder="Juan Pablo">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="correo">Correo:</label>
+                <input type="email" name="correo" id="" class="form-control" placeholder="latrinitariard@rd.com">
+            </div>
+            <div class="col-md-12">
+                <label for="correo_repetido">Repetir Correo:</label>
+                <input type="email" name="correo_repetido" id="" class="form-control" placeholder="latrinitariard@rd.com">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="pass">Contraseña:</label>
+                <input type="password" name="pass" id="" class="form-control" placeholder="letras_y_numeros19">
+            </div>
+            <div class="col-md-12">
+                <label for="pass_repetido">Repetir Contraseña:</label>
+                <input type="email" name="pass_repetido" id="" class="form-control" placeholder="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="provincia">Provincia</label>
+                <input type="text" name="provincia" id="" class="form-control" placeholder="Provicia">
+            </div>
+            <div class="col-md-6">
+                <label for="municipio">Municipio</label>
+                <input type="text" name="municipio" id="" class="form-control" placeholder="minicipio">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="calle">Calle:</label>
+                <input type="text" name="calle" id="" class="form-control" placeholder="C/4ta jacinto de los santos">
+            </div>
+            <div class="col-md-6">
+                <label for="sector">Sector:</label>
+                <input type="text" name="sector" id="" class="form-control" placeholder="los mameyes">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 btn_guardar_nuevo_registro">
+                <button type="submit" class="btn btn-success btn-block btn_nuevo_registro">
+                    <span class="glyphicon glyphicon-floppy-disk"></span> Guardar datos
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
