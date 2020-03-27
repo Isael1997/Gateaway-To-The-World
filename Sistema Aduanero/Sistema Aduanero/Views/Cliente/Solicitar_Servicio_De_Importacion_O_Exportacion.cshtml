@@ -1,0 +1,85 @@
+@{
+    Layout = "_Layout_Cliente";
+}
+<div class="row">
+    <div class="col-md-5 col-md-offset-4">
+        <h1>Solicitar nuevo servicio.</h1>
+    </div>
+</div>
+<!-- Formulario nuevo envio. -->
+<div class="row">
+<form method="" action="" class="formulario_envio col-md-6 col-md-offset-3">
+        @* <div class="col-md-12">
+            <label for="codigo_cliente"></label>
+            <input type="text" name="codigo_cliente" id="" placeholder="Ingresa tu código de cliente" class="form-control">
+        </div> *@
+        <div class="dropdown col-md-6">
+            <select id="select_tiempo_de_entrega" class="form-control" name="tipo_">
+                <option title="" value="">Selecciona el tiempo de llegada</option>
+                <option title="" value="">Para mañana o más tardar 4 días</option>
+                <option title="" value="">De 15 a 30 días</option>
+            </select>
+        </div>
+        <div class="col-md-6 columna_para_radio_buttons">
+            <div class="col-group radio_button_importar">
+                <input type="radio" name="servicios" id="importar">
+                <label for="servicios">Importar</label>
+            </div>
+            <div class="col-group radio_button_exportar">
+                <input type="radio" name="servicios" id="exportar">
+                <label for="servicios">Exportar</label>
+            </div>
+        </div>
+
+        
+        <div class="dropdown col-md-12">
+            <select id="select_tipo_de_mercancia" class="form-control">
+                <option title="" value="">Selecciona el tipo de mercancia</option>
+                <option title="" value="">Electrodomesticos</option>
+                <option title="" value="">Muebles</option>
+                <option title="" value="">Juguetes</option>
+                <option title="" value="">Dispositivos electrónicos</option>
+            </select>
+        </div>
+
+        <div class="col-md-12">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" name="cantidad" id="" class="form-control" placeholder="000">
+        </div>
+        
+        <div class="col-md-12">
+            <label for="descripcion">Descripción:</label>
+            <input type="text" name="descripcion" id="" class="form-control" placeholder="De una descripción de su mercancia">
+        </div>
+
+    <!-- Datos de quien recibe el envio -->
+        <div class="col-md-12">
+            <label for="nombre_receptor">Nombre (Completo) del Receptor:</label>
+            <input type="text" name="nombre_receptor" id="" class="form-control" placeholder="Juan Pablo Duarte y Diez">
+        </div>
+        <div class="col-md-12">
+            <label for="cedula_receptor">Cedula del Receptor:</label>
+            <input type="text" name="cedula_receptor" id="" class="form-control" placeholder="40225860567">
+        </div>
+    <!-- Datos de quien recibe el envio -->
+
+    <!-- Cantidad de articulos, fecha del envio, estado del envio-->
+        <div class="col-md-12">
+            <label for="fecha_del_envio">Fecha:</label>
+            <input type="date" name="fecha_del_envio" id="" class="form-control" placeholder="Juan Pablo Duarte y Diez">
+        </div>
+        <div class="col-md-12">
+            <label for="estado_del_envio">Estado del envio</label>
+            <input type="text" name="estado_del_envio" id="" class="form-control" placeholder="Aún en el país donde se origino la orden.">
+        </div>
+    <!-- Cantidad de articulos, fecha del envio, estado del envio-->
+
+    <!-- Botón guardar envio -->
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-info btn-block btn_guardar_solicitud">
+                Guardar Envio. <span class="glyphicon glyphicon-send"></span>
+            </button>
+        </div>
+    <!-- Botón guardar envio -->
+</form>
+</div>

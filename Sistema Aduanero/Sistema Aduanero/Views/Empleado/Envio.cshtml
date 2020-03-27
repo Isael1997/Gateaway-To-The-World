@@ -1,0 +1,57 @@
+@{
+    Layout = "_Layout_Empleados";
+}
+<div class="row">
+    <div class="col-md-8 col-md-offset-5">
+        <h1>Nuevo Envio</h1>
+    </div>
+</div>
+<!-- Formulario nuevo envio. -->
+<div class="row">
+<form method="" action="" class="formulario_envio col-md-6 col-md-offset-3">
+    <!-- No. del envio y nombre del remitente -->
+        <div class="col-md-12">
+            <label for="id_envio">No. Envio</label>
+            <input type="text" name="id_envio" id="" placeholder="5555874" class="form-control">
+        </div>
+        <div class="col-md-12">
+            <label for="nombre_remitente">Nombre Remitente:</label>
+            <input type="text" name="nombre_remitente" id="" class="form-control" placeholder="5555874">
+        </div>
+    <!-- No. del envio y nombre del remitente -->
+
+    <!-- Datos de quien recibe el envio -->
+        <div class="col-md-12">
+            <label for="nombre_receptor">Nombre (Completo) del Receptor:</label>
+            <input type="text" name="nombre_receptor" id="" class="form-control" placeholder="Juan Pablo Duarte y Diez">
+        </div>
+        <div class="col-md-12">
+            <label for="cedula_receptor">Cedula del Receptor:</label>
+            <input type="text" name="cedula_receptor" id="" class="form-control" placeholder="40225860567">
+        </div>
+    <!-- Datos de quien recibe el envio -->
+
+    <!-- Cantidad de articulos, fecha del envio, estado del envio-->
+        <div class="col-md-12">
+            <label for="cantidad_de_articulos">Cantidad de articulos:</label>
+            <input type="text" name="cantidad_de_articulos" id="" class="form-control" placeholder="50">
+        </div>
+        <div class="col-md-12">
+            <label for="fecha_del_envio">Fecha:</label>
+            <input type="date" name="fecha_del_envio" id="" class="form-control" placeholder="Juan Pablo Duarte y Diez">
+        </div>
+        <div class="col-md-12">
+            <label for="estado_del_envio">Estado del envio</label>
+            <input type="text" name="estado_del_envio" id="" class="form-control" placeholder="Aún en el país donde se origino la orden.">
+        </div>
+    <!-- Cantidad de articulos, fecha del envio, estado del envio-->
+
+    <!-- Botón guardar envio -->
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-info btn-block btn_guardar_envio">
+                Guardar Envio. <span class="glyphicon glyphicon-send"></span>
+            </button>
+        </div>
+    <!-- Botón guardar envio -->
+</form>
+</div>

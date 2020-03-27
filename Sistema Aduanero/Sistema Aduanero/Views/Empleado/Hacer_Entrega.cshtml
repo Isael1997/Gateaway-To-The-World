@@ -1,0 +1,58 @@
+@{
+    Layout = "_Layout_Empleados";
+}
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h1>Hacer entrega de la mercancia.</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 buscador_para_hacer_entrega_del_pedido">
+        <form action="" method="get" class="">
+            <label for="buscar_por_id_pedido">No. de pedido</label>
+            <div class="input-group">
+                    <input type="text" name="buscar_por_id_pedido" class="form-control" placeholder="5555874">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </button>
+                    </span>
+            </div><!-- /input-group -->
+            <!--</div> /.col-lg-6 -->
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <b>Pedido no:</b> 5555874
+            </li>
+            <li class="list-group-item">
+                <b>Cliente:</b> Carlos Manuel
+            </li>
+            <li class="list-group-item">
+                <b>Articulo:</b> Billeteras
+            </li>
+            <li class="list-group-item">
+                <b>Cantidad:</b> 8
+            </li>
+            <li class="list-group-item">
+                <b>Estado:</b> Pendiente
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <form action="" method="" action="">
+            <label for="entrega_realizada">Entrega realizada</label>
+            <input type="checkbox" name="entrega_realizada" placeholder="form-control">
+            <button type="submit" class="btn btn-info btn-block btn_guardar_envio_realizado">
+                Guardar <span class="glyphicon glyphicon-ok"></span>
+            </button>
+        </form>
+    </div>
+</div>

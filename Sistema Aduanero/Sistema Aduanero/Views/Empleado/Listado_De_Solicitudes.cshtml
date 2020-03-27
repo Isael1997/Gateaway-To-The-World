@@ -1,0 +1,79 @@
+@{
+    Layout = "_Layout_Empleados";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <h1>Listado de solicitudes</h1>
+    </div>
+    <div class="col-md-4 col-md-offset-4">
+        <form action="" method="get" class="mini_formulario_para_consultar_solicitudes">
+            <div class="input-group">
+                    <input type="text" name="noticias" class="form-control" placeholder="No. del pedido">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </button>
+                    </span>
+            </div><!-- /input-group -->
+            <!--</div> /.col-lg-6 -->
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Filtrar solicitudes
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Enviados</a></li>
+                <li><a href="#">Pendientes</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row tabla_listado_de_solicitudes">
+    <div class="col-md-12">
+        <table class="table">
+            <tr>
+                <th>Cliente</th>
+                <th>No. del pedido</th>
+                <th>Cantidad</th>
+                <th>Estado</th>
+                <th>Empleado</th>
+                <th>Nombre del articulo</th>
+                <th>Precio</th>
+                <th>Tipo de pedido</th>
+            </tr>
+            <tr>
+                <td>Juan Lopez</td>
+                <td>125487</td>
+                <td>25</td>
+                <td>pendiente</td>
+                <td>Jose Fina Guzman</td>
+                <td>Lavadora</td>
+                <td>320,000.00</td>
+                <td>GATEWAY TO THE WORLD EXPRESS 10:30</td>
+            </tr>
+            <tr>
+                <td>Antonio Reyes</td>
+                <td>16156584</td>
+                <td>25</td>
+                <td>pendiente</td>
+                <td>Jose Fina Guzman</td>
+                <td>Paca</td>
+                <td>25,000.00</td>
+                <td>GATEWAY TO THE WORLD EXPRESS EASY</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!--
+    |Nombre del cliente|Cantidad|Estado   |Empleado        |Nombre del articulo|Precio|Tipo de pedido                    |
+    |Juan Jose         |25      |pendiente|Jose Fina Guzman|Lavadora                  |GATEWAY TO THE WORLD EXPRESS 10:30|
+    |Juan Jose         |25      |pendiente|Jose Fina Guzman|Lavadora                  |GATEWAY TO THE WORLD EXPRESS EASY |
+    |Juan Jose         |25      |pendiente|Jose Fina Guzman|Lavadora                  |GATEWAY TO THE WORLD EXPRESS EASY |
+-->
