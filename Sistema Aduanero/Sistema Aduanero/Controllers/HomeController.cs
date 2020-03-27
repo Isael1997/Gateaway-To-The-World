@@ -14,18 +14,17 @@ namespace Sistema_Aduanero.Controllers
         {
             return View();
         }
-
-        public IActionResult About()
+        public IActionResult Sobre_Nosotros()
         {
+            //Información relevante a la empresa.
             ViewData["Message"] = "Your application description page.";
 
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Servicios()
         {
-            ViewData["Message"] = "Your contact page.";
-
+            //En este se programaran los servicios del sistema.
             return View();
         }
 
@@ -33,7 +32,13 @@ namespace Sistema_Aduanero.Controllers
         {
             return View();
         }
-
+        
+        public IActionResult Login()
+        {
+            //Las acciones del login.
+            return View();
+        }
+        
         public IActionResult Privacy()
         {
             return View();
