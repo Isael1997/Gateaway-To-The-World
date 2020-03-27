@@ -39,6 +39,10 @@ namespace Sistema_Aduanero.Controllers
             return View();
         }
         
+        public IActionResult Registrar_Nuevo_Cliente()
+        {
+            return RedirectToAction(nameof(Login));
+        }
         public IActionResult Privacy()
         {
             return View();
