@@ -22,6 +22,18 @@ namespace Sistema_Aduanero.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult Facturar()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Facturar(string no_solicitud, string balance)
+        {
+            return View();
+        }
+
         public IActionResult Solicitar_Servicio_De_Importacion_O_Exportacion()
         {
             return View();
