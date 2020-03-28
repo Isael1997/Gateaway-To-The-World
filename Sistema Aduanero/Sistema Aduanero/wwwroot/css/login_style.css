@@ -26,3 +26,9 @@
     margin-left: 0px;
     padding: 20px;
 }
+
+#formulario_nuevo_registro{
+    display: none;
+    /*  visibility: hidden; La diferencia esta en que display elimina el espacio del elemento que 
+        oculta, en cambio visibility lo oculta pero deja el espacio.*/
+}
