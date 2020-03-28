@@ -56,7 +56,44 @@ namespace Sistema_Aduanero
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}"
+                );
+                routes.MapRoute(
+                    name: "empleado_ventana_perfil",
+                    template: "{controller=Empleado}/{action=Perfil}/{id?}"
+                );
+                routes.MapRoute(
+                    name: "empleado_ventana_listado_de_pedidos",
+                    template: "{controller=Empleado}/{action=Listado_De_Solicitudes}/{id?}"
+                );
+                routes.MapRoute(
+                    name: "empleado_ventana_envio",
+                    template: "{controller=Empleado}/{action=Envio}/{id?}"
+                );
+                routes.MapRoute(
+                    name: "empleado_ventana_declarar",
+                    template: "{controller=Empleado}/{action=Declarar}/{id?}"
+                );
+                routes.MapRoute(
+                    name: "empleado_ventana_Hacer_Entrega",
+                    template: "{controller=Empleado}/{action=Hacer_Entrega}/{id?}"
+                );
+                routes.MapRoute(
+                    name: "cliente_ventana_perfil",
+                    template: "{controller=Cliente}/{action=Perfil}/{id?}"
+                );
+                routes.MapRoute(
+                    name: "cliente_ventana_listado_solicitudes_realizadas",
+                    template: "{controller=Cliente}/{action=Listado_De_Servicios_Contratados}/{id?}"
+                );
+                routes.MapRoute(
+                    name: "cliente_formulario_para_Servicio_De_Importacion_O_Exportacion",
+                    template: "{controller=Cliente}/{action=Solicitar_Servicio_De_Importacion_O_Exportacion}/{id?}"
+                );
+                routes.MapRoute(
+                    name: "Facturacion",
+                    template: "{controller=Cliente}/{action=Facturar}/{id?}"
+                );
             });
         }
     }
