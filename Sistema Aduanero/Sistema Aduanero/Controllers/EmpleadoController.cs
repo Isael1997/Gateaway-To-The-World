@@ -34,5 +34,9 @@ namespace Sistema_Aduanero.Controllers
         {
             return View();
         }
+        public IActionResult Listado_Clientes() 
+        {
+            return View();
+        }
     }
 }

@@ -17,8 +17,6 @@ namespace Sistema_Aduanero.Controllers
         public IActionResult Sobre_Nosotros()
         {
             //Información relevante a la empresa.
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 

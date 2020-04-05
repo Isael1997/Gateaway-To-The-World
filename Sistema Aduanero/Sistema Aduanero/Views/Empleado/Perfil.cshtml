@@ -19,9 +19,6 @@
                 <b>Código empleada(o):</b> 2014758461
             </li>
             <li class="list-group-item">
-                <b>Cedula:</b> 40225410769
-            </li>
-            <li class="list-group-item">
                 <a href="#" class="btn btn-danger btn-block">
                     Cerrar Sesión <span class="glyphicon glyphicon-off"></span>
                 </a>
@@ -29,8 +26,17 @@
         </ul>
     </div>
     <div class="col-md-4 col-md-offset-2 botonera_del_perfil_empleado">
-        <a asp-controller="Empleado" asp-action="Listado_De_Solicitudes" class="btn btn-info btn-block">Consultar Pedidos</a>
-        <a asp-controller="Empleado" asp-action="Envio" class="btn btn-info btn-block">Enviar Mercancia</a>
-        <a asp-controller="Empleado" asp-action="Hacer_Entrega" class="btn btn-info btn-block">Entregar Mercancia</a>
+        <a asp-controller="Empleado" asp-action="Listado_Clientes" class="btn btn-info btn-block">
+            <b>Ver Clientes</b>
+        </a>
+        <a asp-controller="Empleado" asp-action="Listado_De_Solicitudes" class="btn btn-info btn-block">
+            <b>Consultar Pedidos</b>
+        </a>
+        <a asp-controller="Empleado" asp-action="Envio" class="btn btn-info btn-block">
+            <b>Enviar Mercancia</b>
+        </a>
+        <a asp-controller="Empleado" asp-action="Hacer_Entrega" class="btn btn-info btn-block">
+            <b>Entregar Mercancia</b>
+        </a>
     </div>
 </div>

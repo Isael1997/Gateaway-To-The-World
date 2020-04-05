@@ -1,0 +1,72 @@
+﻿@{
+    Layout = "_Layout_Empleados";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <h1>Listado de clientes</h1>
+    </div>
+    <div class="col-md-4 col-md-offset-4">
+        <form action="" method="get" class="mini_formulario_para_consultar_solicitudes">
+            <div class="input-group">
+                <input type="text" name="noticias" class="form-control" placeholder="Código del cliente">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </span>
+            </div><!-- /input-group -->
+            <!--</div> /.col-lg-6 -->
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Buscar por:
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Fecha de registro</a></li>
+                <li><a href="#">Feminas</a></li>
+                <li><a href="#">Hombres</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row tabla_listado_de_solicitudes">
+    <div class="col-md-12">
+        <table class="table text-center">
+            <tr>
+                <th>Código</th>
+                <th>Apellido(s)</th>
+                <th>Nombre(s)</th>
+                <th>Cedula</th>
+                <th>Sexo</th>
+                <th>Fecha de registro</th>
+                <th>Dirección</th>
+            </tr>
+            <tr>
+                <td>125487</td>
+                <td>Juan</td>
+                <td>Lopez</td>
+                <td>40225810569</td>
+                <td>M</td>
+                <td>4/3/2020</td>
+                <td>Calle/ Presidente Antonio Guzman - Sector/ Invivienda - Provincia/ Santo Domingo</td>
+            </tr>
+            <tr>
+                <td>125487</td>
+                <td>Juan</td>
+                <td>Lopez</td>
+                <td>40225810569</td>
+                <td>M</td>
+                <td>4/3/2020</td>
+                <td>Calle/ Presidente Antonio Guzman - Sector/ Invivienda - Provincia/ Santo Domingo</td>
+            </tr>
+        </table>
+    </div>
+</div>
