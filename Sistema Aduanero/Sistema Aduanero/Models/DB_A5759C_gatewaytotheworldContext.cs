@@ -29,7 +29,7 @@ namespace Sistema_Aduanero.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Data Source=SQL5033.site4now.net;Initial Catalog=DB_A5759C_gatewaytotheworld;User Id=DB_A5759C_gatewaytotheworld_admin;Password=mkgchalona123");
             }
         }
