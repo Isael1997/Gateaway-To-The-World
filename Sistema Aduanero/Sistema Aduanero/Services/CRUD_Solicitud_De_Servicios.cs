@@ -9,6 +9,7 @@ namespace Sistema_Aduanero.Services
     public class CRUD_Solicitud_De_Servicios : ICRUD_Solicitud_De_Servicios
     {
         private Solicitud _solicitud;
+        private Facturacion _facturacion;
         private const string estatus_de_la_solicitud= "aún en el país de  origen.";
         private const string estatus_solicitud_facturada = "facturado";
         private const string estatus_solicitud_en_proceso = "Procesando";
@@ -68,6 +69,27 @@ namespace Sistema_Aduanero.Services
                 lista_solicitudes_facturadas = consulta;
             }
             return lista_solicitudes_facturadas;
+        }
+
+        public List<Solicitud> Mostrar_Solicitudes()
+        {
+            var list = new List<Solicitud>();
+            using (var dbcontext = new DB_A5759C_gatewaytotheworldContext())
+            {
+                var obj_list_solicitudes = dbcontext.Solicitud.ToList();
+                list = obj_list_solicitudes;
+            }
+            return list;
+        }
+
+        public Solicitud Mostrar_Solicitud_Por_Factura(int id_solicitud_fk)
+        {
+            using (var dbcontext = new DB_A5759C_gatewaytotheworldContext())
+            {
+                var model_solicitud = dbcontext.Solicitud.Find(id_solicitud_fk);
+                _solicitud = model_solicitud;
+            }
+            return _solicitud;
         }
     }
 }

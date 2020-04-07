@@ -8,6 +8,6 @@ namespace Sistema_Aduanero.Services
 {
     public interface IDeclarar
     {
-        Solicitud Declarar_Solicitud(int id_cliente);
+        Solicitud Declarar_Solicitud(int id_solicitud);
     }
 }

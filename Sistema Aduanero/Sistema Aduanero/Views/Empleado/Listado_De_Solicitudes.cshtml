@@ -1,5 +1,7 @@
+@using Sistema_Aduanero.Models
 @{
     Layout = "_Layout_Empleados";
+    var listado_servicios = ViewBag.Listado_General_De_Envios;
 }
 
 <div class="row">
@@ -40,35 +42,22 @@
     <div class="col-md-12">
         <table class="table">
             <tr>
-                <th>Cliente</th>
-                <th>No. del pedido</th>
+                <th>No. del servicio</th>
+                <th>Código Factura</th>
                 <th>Cantidad</th>
                 <th>Estado</th>
-                <th>Empleado</th>
-                <th>Nombre del articulo</th>
-                <th>Precio</th>
-                <th>Tipo de pedido</th>
+                <th>Fecha del envio</th>
             </tr>
-            <tr>
-                <td>Juan Lopez</td>
-                <td>125487</td>
-                <td>25</td>
-                <td>pendiente</td>
-                <td>Jose Fina Guzman</td>
-                <td>Lavadora</td>
-                <td>320,000.00</td>
-                <td>GATEWAY TO THE WORLD EXPRESS 10:30</td>
-            </tr>
-            <tr>
-                <td>Antonio Reyes</td>
-                <td>16156584</td>
-                <td>25</td>
-                <td>pendiente</td>
-                <td>Jose Fina Guzman</td>
-                <td>Paca</td>
-                <td>25,000.00</td>
-                <td>GATEWAY TO THE WORLD EXPRESS EASY</td>
-            </tr>
+            @foreach (var item in listado_servicios)
+            {
+                <tr>
+                    <td>@item.IdEnvio</td>
+                    <td>@item.IdFacturaFkEnvio</td>
+                    <td>@item.CantidadArticulos</td>
+                    <td>@item.FechaDeEnvio</td>
+                    <td>@item.Estatus</td>
+                </tr>
+            }
         </table>
     </div>
 </div>

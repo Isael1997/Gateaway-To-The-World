@@ -46,6 +46,8 @@ namespace Sistema_Aduanero
             services.AddSingleton<ICRUD_Solicitud_De_Servicios, CRUD_Solicitud_De_Servicios>();
             services.AddSingleton<IFacturar_Servicio, Facturar_Servicio>();
             services.AddSingleton<IDeclarar, Declarar>();
+            services.AddSingleton<IEnviar_Mercancia, Enviar_Mercancia>();
+            services.AddSingleton<IHacer_Estrega, Hacer_Estrega>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
