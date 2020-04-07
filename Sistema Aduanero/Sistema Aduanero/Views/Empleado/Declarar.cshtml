@@ -1,5 +1,7 @@
+@using Sistema_Aduanero.Models
 @{
     Layout = "_Layout_Empleados";
+    var solicitudes_facturadas = ViewBag.Solicitudes_Facturadas;
 }
 
 <div class="">
@@ -11,49 +13,26 @@
     <div class="col-md-12">
         <table class="table">
             <tr>
-                <th>Nombre del cliente</th>
+                <th>No. del pedido</th>
                 <th>Cantidad</th>
                 <th>Estado</th>
-                <th>Nombre del articulo</th>
-                <th>Precio</th>
-                <th>Empleado</th>
+                <th>Tipo de servicio</th>
+                <th>Declarar</th>
             </tr>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>3</td>
-                <td>Pediente</td>
-                <td>Misubvichi</td>
-                <td>$320,800.00</td>
-                <td>
-                    <a href="#" class="btn btn-info">
-                        declarar <span class="glyphicon glyphicon-ok"></span>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>Antonia Jimenez</td>
-                <td>3</td>
-                <td>Pediente</td>
-                <td>Caja de comida</td>
-                <td>$25,000.00</td>
-                <td>
-                    <a href="#" class="btn btn-info">
-                        declarar <span class="glyphicon glyphicon-ok"></span>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>Juan Perez</td>
-                <td>100</td>
-                <td>Pediente</td>
-                <td>Equipos electronicos</td>
-                <td>$400,000.00</td>
-                <td>
-                    <a href="#" class="btn btn-info">
-                        declarar <span class="glyphicon glyphicon-ok"></span>
-                    </a>
-                </td>
-            </tr>
+            @foreach (var item in solicitudes_facturadas)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Cantidad</td>
+                    <td>@item.Estatus</td>
+                    <td>@item.TipoDeSolicitud</td>
+                    <td>
+                        <a asp-controller="Empleado" asp-action="Declarar" asp-route-id_solicitud="@item.Id" class="btn btn-info">
+                            <span class="glyphicon glyphicon-ok"></span> Declarar
+                        </a>
+                    </td>
+                </tr>
+            }
         </table>
     </div>
 </div>

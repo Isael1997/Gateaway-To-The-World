@@ -15,7 +15,8 @@ namespace Sistema_Aduanero.Models
         public string TipoMercancia { get; set; }
         public int? Cantidad { get; set; }
         public double? Peso { get; set; }
-        public string Descripción { get; set; }
+        public string Descripción { get; set; } //  NO USAR ESTE------------------ :(
+        public string Descripcion { get; set; } //  Sin acento y sera la que se utilizara de ahora en adelante
         public string TiempoDeseadoEnLlegar { get; set; }
         public string NombreCompletoDeQuienRecibe { get; set; }
         public string Cedula { get; set; }

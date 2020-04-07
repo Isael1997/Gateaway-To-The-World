@@ -8,17 +8,18 @@
 </div>
 <!-- Formulario nuevo envio. -->
 <div class="row">
-<form method="" action="" class="col-md-6 col-md-offset-3">
+    <form asp-controller="Cliente" asp-action="Facturar" class="col-md-6 col-md-offset-3">
+
         <div class="col-md-6 columna_para_radio_buttons">
             <div class="col-group radio_button_importar">
-                <input type="radio" name="pago_de_servicios" id="tarjeta_de_credito">
-                <label for="servicios">
+                <input type="radio" name="metodo_de_pago" id="tarjeta_de_credito" checked value="tarjeta">
+                <label for="tarjeta_de_credito">
                     <span class="glyphicon glyphicon-credit-card"></span> Tarjeta
                 </label>
             </div>
             <div class="col-group Transferencia">
-                <input type="radio" name="pago_de_servicios" id="cuenta_bancaria">
-                <label for="servicios">
+                <input type="radio" name="metodo_de_pago" id="cuenta_bancaria" value="cuenta_bancaria">
+                <label for="cuenta_bancaria">
                     <span class="glyphicon glyphicon-piggy-bank"></span> Transferencia
                 </label>
             </div>
@@ -29,18 +30,27 @@
             <input type="text" name="no_solicitud" id="" class="form-control" placeholder="0000">
         </div>
 
-        <div class="col-md-12">
-            <label for="balance">Balance:</label>
-            <input type="number" name="balance" id="" class="form-control" placeholder="000">
+        <div class="col-md-9">
+            <label for="tarjeta_de_credito">Ingrese Tarjeta</label>
+            <input type="text" name="tarjeta_de_credito" id="" class="form-control" placeholder="000">
         </div>
-        
 
-    <!-- Botón Facturar solicitud. -->
+        <div class="col-md-3">
+            <label for="codigo_cvv">CVV</label>
+            <input type="text" name="codigo_cvv" id="" class="form-control" placeholder="123">
+        </div>
+
+        <div class="col-md-12">
+            <label for="cuenta_bancaria">Ingrese tu Cuenta Bancaria</label>
+            <input type="text" name="cuenta_bancaria" id="" class="form-control" placeholder="000">
+        </div>
+
+        <!-- Botón Facturar solicitud. -->
         <div class="col-md-12">
             <button type="submit" class="btn btn-info btn-block btn_guardar_solicitud">
                 Pagar solicitud. <span class="glyphicon glyphicon-send"></span>
             </button>
         </div>
-    <!-- Botón Facturar solicitud. -->
-</form>
+        <!-- Botón Facturar solicitud. -->
+    </form>
 </div>

@@ -9,8 +9,10 @@ namespace Sistema_Aduanero.Services
     public interface ICRUD_Solicitud_De_Servicios
     {
         Solicitud Nueva_Solicitud(Solicitud model, int id_cliente);
-        List<Solicitud> Mostrar_Solicitudes();
-        Solicitud Editar_Solicitud();
-        void Eliminar_Solicitud();
+        List<Solicitud> Mostrar_Solicitudes(int id_usuario);
+        List<Solicitud> Mostrar_Solicitudes_Facturado();
+        //List<Solicitud> Mostrar_Solicitudes_En_Proceso(int id_usuario);
+        //List<Solicitud> Mostrar_Solicitudes_Entregados(int id_usuario);
+        void Eliminar_Solicitud(int id_solicitud);
     }
 }

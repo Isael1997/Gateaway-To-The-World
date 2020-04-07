@@ -1,5 +1,6 @@
 ﻿@{
     Layout = "_Layout_Empleados";
+    var listado_de_clientes = ViewBag.Listado_Cliente;
 }
 
 <div class="row">
@@ -21,22 +22,6 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Buscar por:
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">Fecha de registro</a></li>
-                <li><a href="#">Feminas</a></li>
-                <li><a href="#">Hombres</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
 <div class="row tabla_listado_de_solicitudes">
     <div class="col-md-12">
         <table class="table text-center">
@@ -44,29 +29,25 @@
                 <th>Código</th>
                 <th>Apellido(s)</th>
                 <th>Nombre(s)</th>
+                <th>Empresa</th>
                 <th>Cedula</th>
-                <th>Sexo</th>
+                <th>Provincia</th>
+                <th>Municipio</th>
                 <th>Fecha de registro</th>
-                <th>Dirección</th>
             </tr>
-            <tr>
-                <td>125487</td>
-                <td>Juan</td>
-                <td>Lopez</td>
-                <td>40225810569</td>
-                <td>M</td>
-                <td>4/3/2020</td>
-                <td>Calle/ Presidente Antonio Guzman - Sector/ Invivienda - Provincia/ Santo Domingo</td>
-            </tr>
-            <tr>
-                <td>125487</td>
-                <td>Juan</td>
-                <td>Lopez</td>
-                <td>40225810569</td>
-                <td>M</td>
-                <td>4/3/2020</td>
-                <td>Calle/ Presidente Antonio Guzman - Sector/ Invivienda - Provincia/ Santo Domingo</td>
-            </tr>
+            @foreach (var item in listado_de_clientes)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Apellidos</td>
+                    <td>@item.Nombres</td>
+                    <td>@item.Empresa</td>
+                    <td>@item.Cedula</td>
+                    <td>@item.Provincia</td>
+                    <td>@item.Municipio</td>
+                    <td>@item.FechaDeRegistro</td>
+                </tr>
+            }
         </table>
     </div>
 </div>

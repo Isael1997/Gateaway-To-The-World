@@ -44,6 +44,8 @@ namespace Sistema_Aduanero
             services.AddSingleton<ICRUD_Telefono_y_Correo, CRUD_Telefono_y_Correo>();
             services.AddSingleton<IValidacion_Solicitud_De_Servicio, Validacion_Solicitud_De_Servicio>();
             services.AddSingleton<ICRUD_Solicitud_De_Servicios, CRUD_Solicitud_De_Servicios>();
+            services.AddSingleton<IFacturar_Servicio, Facturar_Servicio>();
+            services.AddSingleton<IDeclarar, Declarar>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -79,6 +81,10 @@ namespace Sistema_Aduanero
                 routes.MapRoute(
                     name: "empleado_ventana_listado_de_pedidos",
                     template: "{controller=Empleado}/{action=Listado_De_Solicitudes}/{id?}"
+                );
+                routes.MapRoute(
+                    name: "eliminar",
+                    template: "{controller=Cliente}/{action=Eliminar_Solicitud}/{id?}"
                 );
                 routes.MapRoute(
                     name: "empleado_ventana_envio",

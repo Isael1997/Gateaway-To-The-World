@@ -1,5 +1,7 @@
+
 @{
     Layout = "_Layout_Cliente";
+    var listado_solicitudes = ViewBag.Listado_Solicitudes;
 }
 
 <div class="row">
@@ -28,8 +30,10 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">Enviados</a></li>
                 <li><a href="#">Pendientes</a></li>
+                <li><a href="#">Facturados</a></li>
+                <li><a href="#">En Proceso</a></li>
+                <li><a href="#">Entregados</a></li>
             </ul>
         </div>
     </div>
@@ -39,38 +43,30 @@
     <div class="col-md-12">
         <table class="table">
             <tr>
-                <th>Cliente</th>
                 <th>No. del pedido</th>
                 <th>Cantidad</th>
                 <th>Estado</th>
-                <th>Nombre del articulo</th>
-                <th>Precio</th>
-                <th>Tipo de pedido</th>
+                <th>Balance</th>
+                <th>Tipo de servicio</th>
+                <th>Descripcion</th>
+                <th>Eliminar</th>
             </tr>
-            <tr>
-                <td>Juan Lopez</td>
-                <td>125487</td>
-                <td>25</td>
-                <td>pendiente</td>
-                <td>Lavadora</td>
-                <td>320,000.00</td>
-                <td>GATEWAY TO THE WORLD EXPRESS 10:30</td>
-            </tr>
-            <tr>
-                <td>Antonio Reyes</td>
-                <td>16156584</td>
-                <td>25</td>
-                <td>pendiente</td>
-                <td>Paca</td>
-                <td>25,000.00</td>
-                <td>GATEWAY TO THE WORLD EXPRESS EASY</td>
-            </tr>
+            @foreach (var item in listado_solicitudes)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Cantidad</td>
+                    <td>@item.Estatus</td>
+                    <td>----Aqui el precio</td>
+                    <td>@item.TipoDeSolicitud</td>
+                    <td>@item.Descripcion</td>
+                    <td>
+                        <a asp-controller="Cliente" asp-action="Eliminar_Solicitud" asp-route-id_solicitud="@item.Id" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+            }
         </table>
     </div>
 </div>
-<!--
-    |Nombre del cliente|Cantidad|Estado   |Empleado        |Nombre del articulo|Precio|Tipo de pedido                    |
-    |Juan Jose         |25      |pendiente|Jose Fina Guzman|Lavadora                  |GATEWAY TO THE WORLD EXPRESS 10:30|
-    |Juan Jose         |25      |pendiente|Jose Fina Guzman|Lavadora                  |GATEWAY TO THE WORLD EXPRESS EASY |
-    |Juan Jose         |25      |pendiente|Jose Fina Guzman|Lavadora                  |GATEWAY TO THE WORLD EXPRESS EASY |
--->

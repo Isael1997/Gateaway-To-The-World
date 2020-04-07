@@ -11,7 +11,8 @@ namespace Sistema_Aduanero.Services
         private Usuario _usuario;
         private const int _id_designado_para_cliente = 102578; //Esta variable como su nombre lo indica es el código designado para los clientes.
         private string _estado_del_cliente;
-
+        private const int rol_empleado = 102478;
+        private const int rol_cliente = 102578;
         public CRUD_Usuario()
         {
             _estado_del_cliente = "activo"; //Como lo indica su nombre es utilizada para definir el estado del cliente.
@@ -65,7 +66,13 @@ namespace Sistema_Aduanero.Services
 
         public List<Usuario> Listado_Cliente()
         {
-            throw new NotImplementedException();
+            var list = new List<Usuario>();
+            using (var dbcontext = new DB_A5759C_gatewaytotheworldContext())
+            {
+                var model = dbcontext.Usuario.Where(uCliente => uCliente.IdRolFk == rol_cliente).ToList();
+                list = model;
+            }
+            return list;
         }
     }
 }

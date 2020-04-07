@@ -15,11 +15,16 @@ namespace Sistema_Aduanero.Controllers
         private string _rol_del_usuario;
         private ICRUD_Usuario _crud_Usuario;
         private ICRUD_Telefono_y_Correo _crud_Telefono_y_Correo;
+        private ICRUD_Solicitud_De_Servicios _crud_Solicitud_De_Servicios;
+        private IFacturar_Servicio _facturar_Servicio;
 
-        public EmpleadoController(ICRUD_Usuario crud_Usuario, ICRUD_Telefono_y_Correo crud_Telefono_y_Correo)
+        public EmpleadoController(ICRUD_Usuario crud_Usuario, ICRUD_Telefono_y_Correo crud_Telefono_y_Correo,
+            ICRUD_Solicitud_De_Servicios crud_Solicitud_De_Servicios, IFacturar_Servicio facturar_Servicio)
         {
             _crud_Usuario = crud_Usuario;
             _crud_Telefono_y_Correo = crud_Telefono_y_Correo;
+            _crud_Solicitud_De_Servicios = crud_Solicitud_De_Servicios;
+            _facturar_Servicio = facturar_Servicio;
         }
 
         //  Este es el perfil del empleado.
@@ -53,14 +58,37 @@ namespace Sistema_Aduanero.Controllers
         }
         public IActionResult Declarar()
         {
+            var model = _crud_Solicitud_De_Servicios.Mostrar_Solicitudes_Facturado();
+
+            ViewBag.Solicitudes_Facturadas = model;
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Declarar(int id_cliente)
+        {
+            var model = _crud_Solicitud_De_Servicios.Mostrar_Solicitudes_Facturado();
+
+            ViewBag.Solicitudes_Facturadas = model;
             return View();
         }
         public IActionResult Hacer_Entrega()
         {
             return View();
         }
+
         public IActionResult Listado_Clientes() 
         {
+            var model = _crud_Usuario.Listado_Cliente();
+
+            ViewBag.Listado_Cliente = model;
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Listado_Clientes(int id_cliente)
+        {
+            var model = _crud_Usuario.Listado_Cliente();
+
+            ViewBag.Listado_Cliente = model;
             return View();
         }
         private int _id_Del_Usuario()
