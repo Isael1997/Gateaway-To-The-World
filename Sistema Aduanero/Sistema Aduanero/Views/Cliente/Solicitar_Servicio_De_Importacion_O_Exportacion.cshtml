@@ -8,51 +8,62 @@
 </div>
 <!-- Formulario nuevo envio. -->
 <div class="row">
-<form method="" action="" class="formulario_envio col-md-6 col-md-offset-3">
-        @* <div class="col-md-12">
-            <label for="codigo_cliente"></label>
-            <input type="text" name="codigo_cliente" id="" placeholder="Ingresa tu código de cliente" class="form-control">
-        </div> *@
+    <form asp-controller="Cliente" asp-action="Solicitar_Servicio_De_Importacion_O_Exportacion" class="formulario_envio col-md-6 col-md-offset-3">
         <div class="dropdown col-md-6">
-            <select id="select_tiempo_de_entrega" class="form-control" name="tipo_">
-                <option title="" value="">Selecciona el tiempo de llegada</option>
-                <option title="" value="">Para mañana o más tardar 4 días</option>
-                <option title="" value="">De 15 a 30 días</option>
+            <select id="select_tiempo_de_entrega" name="tiempo_de_llegada" class="form-control">
+                <option title="" value="NN">Selecciona el tiempo de llegada</option>
+                <option title="" value="PM4">Para mañana o más tardar 4 días</option>
+                <option title="" value="FTT">De 15 a 30 días</option>
             </select>
         </div>
         <div class="col-md-6 columna_para_radio_buttons">
             <div class="col-group radio_button_importar">
-                <input type="radio" name="servicios" id="importar">
+                <input type="radio" name="servicios" id="importar" value="importar">
                 <label for="servicios">Importar</label>
             </div>
             <div class="col-group radio_button_exportar">
-                <input type="radio" name="servicios" id="exportar">
+                <input type="radio" name="servicios" id="exportar" value="exportar">
                 <label for="servicios">Exportar</label>
             </div>
         </div>
 
-        
+
         <div class="dropdown col-md-12">
-            <select id="select_tipo_de_mercancia" class="form-control">
-                <option title="" value="">Selecciona el tipo de mercancia</option>
-                <option title="" value="">Electrodomesticos</option>
-                <option title="" value="">Muebles</option>
-                <option title="" value="">Juguetes</option>
-                <option title="" value="">Dispositivos electrónicos</option>
+            <select id="select_tipo_de_mercancia" class="form-control" name="tipos_de_articulos">
+                <option title="" value="NN">Selecciona el tipo de mercancia</option>
+                <option title="" value="SELECTS">Electrodomesticos</option>
+                <option title="" value="SMS">Muebles</option>
+                <option title="" value="STS">Juguetes</option>
+                <option title="" value="SDES">Dispositivos electrónicos</option>
             </select>
         </div>
 
         <div class="col-md-12">
-            <label for="cantidad">Cantidad:</label>
-            <input type="number" name="cantidad" id="" class="form-control" placeholder="000">
+            <label for="cantidad">Cantidad</label>
+            <input type="number" name="cantidad" id="" class="form-control" placeholder="Aún en el país donde se origino la orden.">
         </div>
-        
+
+        <div class="col-md-12">
+            <label for="peso_de_la_mercancia">Elija el peso de su mercancia.</label>
+            <select id="peso_de_la_mercancia" class="form-control" name="peso_de_la_mercancia">
+                <option title="" value="NN">Peso de la mercancia</option>
+                <option title="" value="OLB">1 lb</option>
+                <option title="" value="TWLB">2 lb</option>
+                <option title="" value="TLB">3 lb</option>
+                <option title="" value="FRLB">4 lb</option>
+                <option title="" value="FLB">5 lb</option>
+                <option title="" value="FKG">5 kg</option>
+                <option title="" value="TKG">10 kg</option>
+                <option title="" value="TWKG">+20 kg</option>
+            </select>
+        </div>
+
         <div class="col-md-12">
             <label for="descripcion">Descripción:</label>
             <input type="text" name="descripcion" id="" class="form-control" placeholder="De una descripción de su mercancia">
         </div>
 
-    <!-- Datos de quien recibe el envio -->
+        <!-- Datos de quien recibe el envio -->
         <div class="col-md-12">
             <label for="nombre_receptor">Nombre (Completo) del Receptor:</label>
             <input type="text" name="nombre_receptor" id="" class="form-control" placeholder="Juan Pablo Duarte y Diez">
@@ -61,25 +72,11 @@
             <label for="cedula_receptor">Cedula del Receptor:</label>
             <input type="text" name="cedula_receptor" id="" class="form-control" placeholder="40225860567">
         </div>
-    <!-- Datos de quien recibe el envio -->
-
-    <!-- Cantidad de articulos, fecha del envio, estado del envio-->
-        <div class="col-md-12">
-            <label for="fecha_del_envio">Fecha:</label>
-            <input type="date" name="fecha_del_envio" id="" class="form-control" placeholder="Juan Pablo Duarte y Diez">
-        </div>
-        <div class="col-md-12">
-            <label for="estado_del_envio">Estado del envio</label>
-            <input type="text" name="estado_del_envio" id="" class="form-control" placeholder="Aún en el país donde se origino la orden.">
-        </div>
-    <!-- Cantidad de articulos, fecha del envio, estado del envio-->
-
-    <!-- Botón guardar envio -->
         <div class="col-md-12">
             <button type="submit" class="btn btn-info btn-block btn_guardar_solicitud">
                 Guardar Envio. <span class="glyphicon glyphicon-send"></span>
             </button>
         </div>
-    <!-- Botón guardar envio -->
-</form>
+        <!-- Botón guardar envio -->
+    </form>
 </div>

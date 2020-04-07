@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Sistema_Aduanero.Services;
 
 namespace Sistema_Aduanero
 {
@@ -24,12 +25,25 @@ namespace Sistema_Aduanero
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDistributedMemoryCache();
+            services.AddSession(option=> 
+            {
+                option.IdleTimeout = TimeSpan.FromDays(1);
+                option.CookieName = "MySession";
+            });
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+
+            services.AddSingleton<ILogin, Login>();
+            services.AddSingleton<IValidacion_De_Registros_Cliente, Validacion_De_Registros_Cliente>();
+            services.AddSingleton<ICRUD_Usuario, CRUD_Usuario>();
+            services.AddSingleton<ICRUD_Telefono_y_Correo, CRUD_Telefono_y_Correo>();
+            services.AddSingleton<IValidacion_Solicitud_De_Servicio, Validacion_Solicitud_De_Servicio>();
+            services.AddSingleton<ICRUD_Solicitud_De_Servicios, CRUD_Solicitud_De_Servicios>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -47,6 +61,7 @@ namespace Sistema_Aduanero
                 app.UseHsts();
             }
 
+            app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();

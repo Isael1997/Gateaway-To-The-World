@@ -14,7 +14,8 @@
     </div>
 </div>
 <div class="row">
-    <form action="" method="" class="col-md-6">
+    <!--    Iniciar Sesion  -->
+    <form asp-action="Login" asp-controller="Home" class="col-md-6">
         <div class="row">
             <div class="col-md-12">
                 <label for="correo">Correo:</label>
@@ -28,7 +29,8 @@
         <div class="row formulario_login">
             <div class="col-md-12">
                 <button type="submit" class="btn btn-success btn-block btn_iniciar_sesion">
-                    Enviar <span class="glyphicon glyphicon-send"></span></button>
+                    Iniciar Sesión <span class="glyphicon glyphicon-chevron-right"></span>
+                </button>
             </div>
             <div class="col-md-4 col-md-offset-4">
                 <a href="#" class="text-danger">Olvide mi contraseña</a>
@@ -36,15 +38,32 @@
         </div>
     </form>
 
-    <form action="" method="" class="col-md-6" id="formulario_nuevo_registro">
+    <!--    Registrar nuevo usuario -->
+    <form asp-action="Registrar_Nuevo_Cliente" asp-controller="Home" class="col-md-6" id="formulario_nuevo_registro">
         <div class="row">
             <div class="col-md-6">
                 <label for="apellidos">Apellido(s):</label>
                 <input type="text" name="apellidos" id="" class="form-control" placeholder="Duarte y Diez">
             </div>
             <div class="col-md-6">
-                <label for="Nombres">Nombre(s)</label>
-                <input type="text" name="Nombres" id="" class="form-control" placeholder="Juan Pablo">
+                <label for="nombres">Nombre(s)</label>
+                <input type="text" name="nombres" id="" class="form-control" placeholder="Juan Pablo">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="cedula">Cedula:</label>
+                <input type="text" name="cedula" id="" class="form-control" placeholder="00100000001">
+            </div>
+            <div class="col-md-6">
+                <label for="telefono">Telefono:</label>
+                <input type="text" name="telefono" id="" class="form-control" placeholder="8097384852">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label for="empresa">Empresa:</label>
+                <input type="text" name="empresa" id="" class="form-control" placeholder="latrinitariard@rd.com">
             </div>
         </div>
         <div class="row">
@@ -64,16 +83,16 @@
             </div>
             <div class="col-md-12">
                 <label for="pass_repetido">Repetir Contraseña:</label>
-                <input type="email" name="pass_repetido" id="" class="form-control" placeholder="">
+                <input type="password" name="pass_repetido" id="" class="form-control" placeholder="">
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <label for="provincia">Provincia</label>
+                <label for="provincia">Provincia:</label>
                 <input type="text" name="provincia" id="" class="form-control" placeholder="Provicia">
             </div>
             <div class="col-md-6">
-                <label for="municipio">Municipio</label>
+                <label for="municipio">Municipio:</label>
                 <input type="text" name="municipio" id="" class="form-control" placeholder="minicipio">
             </div>
         </div>

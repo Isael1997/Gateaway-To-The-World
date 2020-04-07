@@ -1,27 +1,38 @@
+@using Sistema_Aduanero.Models;
+
 @{
     Layout = "_Layout_Cliente";
+    var datos_del_usuario = ViewBag.Perfil;
+    string datos_telefono = (ViewBag.Telefono_Usuario.Telefono != null) ? ViewBag.Telefono_Usuario.Telefono : "Agrega tu telefono.";
+    string datos_correo = (ViewBag.Correo_Usuario.Correo != null) ? ViewBag.Correo_Usuario.Correo : "Agrega tu correo.";
 }
 
 <div class="row fila_datos_perfil_empleado">
     <div class="col-md-5">
         <ul class="list-group">
             <li class="list-group-item">
-                <h1>Amadis Suarez</h1>
+                <h1>@datos_del_usuario.Nombres @datos_del_usuario.Apellidos</h1>
             </li>
             <li class="list-group-item">
-                <b>Nombre:</b> Amadis
+                <b>Nombre(s):</b> @datos_del_usuario.Nombres
             </li>
             <li class="list-group-item">
-                <b>Apellido:</b> Suarez
+                <b>Apellido(s):</b> @datos_del_usuario.Apellidos
             </li>
             <li class="list-group-item">
-                <b>Código cliente:</b> 2014758461
+                <b>Código cliente:</b> @datos_del_usuario.Id
             </li>
             <li class="list-group-item">
-                <b>Cedula:</b> 40225410769
+                <b>Cedula:</b> @datos_del_usuario.Cedula
             </li>
             <li class="list-group-item">
-                <a href="#" class="btn btn-danger btn-block">
+                <b>Telefono:</b> @datos_telefono
+            </li>
+            <li class="list-group-item">
+                <b>Correo:</b> @datos_correo
+            </li>
+            <li class="list-group-item">
+                <a asp-action="Cerrar_Sesion" class="btn btn-danger btn-block">
                     Cerrar Sesión <span class="glyphicon glyphicon-off"></span>
                 </a>
             </li>
