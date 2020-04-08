@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta charset="ISO-8859-1" />
+    <meta charset="UTF-8" />
+    @*<meta charset="ISO-8859-1" />*@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Sistema_Aduanero</title>
 
@@ -38,19 +38,19 @@
 
                 <img src="../IMG/Escudo_Nacional.PNG" class="rounded escudoNacional" alt="imagen del escudo nacional">
                 <p class="nombreDeLaNacion">República Dominicana</p>
-                
+
                 <form action="" method="get" class="formulario_Para_Buscar">
                     <div class="input-group">
-                            <input type="text" name="noticias" class="form-control" placeholder="Buscar...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="submit">
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                </button>
-                            </span>
+                        <input type="text" name="noticias" class="form-control" placeholder="Buscar...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                        </span>
                     </div><!-- /input-group -->
                     <!--</div> /.col-lg-6 -->
                 </form>
-                
+
                 <span class="miniMenu">
                     <a href="#">INICIO</a> | <a href="#">MAPA DEL SITIO</a> | <a href="#">CONTACTO</a>
                 </span>
@@ -74,7 +74,7 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Sobre_Nosotros">Sobre Nosotros</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Servicios">Servicios</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Noticias">Noticias</a></li>
+                    @*<li><a asp-area="" asp-controller="Home" asp-action="Noticias">Noticias</a></li>*@
                     <li><a asp-area="" asp-controller="Home" asp-action="Login">Login</a></li>
                 </ul>
             </div>
@@ -86,7 +86,14 @@
     <div class="container body-content carousel_imagenes">
         @RenderBody()
     </div>
-    
+
+    <div class="row">
+        <div class="col-lg-2">
+            <a href="https://www.facebook.com/Gateway-to-the-world-100531861602304/?_rdc=1&_rdr" target="_blank">
+                <img src="~/IMG/FB-PNG.png" alt="Alternate Text" id="imgFacebook" />
+            </a>
+        </div>
+    </div>
     <div class="container-fluid">
         <hr />
         <!-- Enlaces para redireccionar a los portales de otras instituciones. -->
@@ -128,7 +135,7 @@
 
     <footer class="container-fluid contenedor_footer">
         <div class="row">
-             <!--aquí el escudo nacional y logo de la empresa-->
+            <!--aquí el escudo nacional y logo de la empresa-->
             <div class="col-sm-12 col-md-offset-6 escudo_nacional_y_logo_en_footer">
                 <img src="../IMG/Escudo_Nacional.PNG" alt="imagen" class="escudo_nacional_footer">
                 <img src="../IMG/Logo.jpg" alt="imagen" class="logo_empresa_footer">
